@@ -43,11 +43,22 @@ public class OddEvenTest {
         Assertions.assertEquals(expectedResult, actualResult);
     }
 
-    @Order(4)
     @Test
     public void testOddEvenBig() {
 //        2147483647 + 1 →  “Undefined”
-        int number = 2147483647 + 1;
+        long number = 2147483647L + 1;
+        String expectedResult = "Undefined";
+
+        OddEven oe = new OddEven();
+        String actualResult = oe.oddEvenAlgorithm(number);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void testOddEvenSmall() {
+
+        long number = -2147483648L - 1;
         String expectedResult = "Undefined";
 
         OddEven oe = new OddEven();
