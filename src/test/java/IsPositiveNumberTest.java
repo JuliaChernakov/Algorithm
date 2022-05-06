@@ -39,6 +39,4 @@ class IsPositiveNumberTest {
 
         Assertions.assertEquals(expectedResult, actualResult);
     }
-
-
 }

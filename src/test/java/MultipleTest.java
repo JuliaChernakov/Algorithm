@@ -6,7 +6,7 @@ public class MultipleTest {
 
     @Order(1)
     @Test
-    public void multipleAlgorithmBoth() {
+    public void multipleAlgorithmHappyPathBoth() {
 
         int number = 15;
         String expectedResult = "Good number";
@@ -19,7 +19,7 @@ public class MultipleTest {
 
     @Order(2)
     @Test
-    public void multipleAlgorithmThree() {
+    public void multipleAlgorithmHappyPathThree() {
 
         int number = 18;
         String expectedResult = "Bad number";
@@ -32,7 +32,7 @@ public class MultipleTest {
 
     @Order(3)
     @Test
-    public void multipleAlgorithmFive() {
+    public void multipleAlgorithmHappyPathFive() {
 
         int number = 20;
         String expectedResult = "Poor number";
@@ -43,9 +43,23 @@ public class MultipleTest {
         Assertions.assertEquals(expectedResult, actualResult);
     }
 
-    @Order(5)
+    @Order(4)
     @Test
     public void multipleAlgorithmNone() {
+
+        int number = 8;
+        String expectedResult = "-1";
+
+        Multiple m = new Multiple();
+        String actualResult = m.multipleAlgorithm(number);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
+
+    @Order(5)
+    @Test
+    public void multipleAlgorithmNegative() {
 
         int number = -15;
         String expectedResult = "Good number";
