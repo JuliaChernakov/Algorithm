@@ -42,10 +42,9 @@ public class Intersection {
             if (haveZero) {
                 x--;
             }
-//            System.out.println(x);
+
             /** убираем пустые места */
             int[] arrayNew = new int[arrayHelp1.length - x];
-//            System.out.println(arrayNew.length);
             int k = 0;
             for (int i = 0; i < arrayHelp1.length; i++) {
                 if (haveZero) {
