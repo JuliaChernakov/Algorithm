@@ -2,8 +2,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class PeakElementTest {
 
     @Order(1)
@@ -21,7 +19,7 @@ class PeakElementTest {
 
     @Test
     void peakElementAlgorithmBorders() {
-//    Test Data: {3, 2, 7, 5, 1, 9, -5, 1} → {3, 7, 9, 1}
+
         int[] array = {3, 2, 7, 5, 1, 9, -5, 1};
         int[] expectedResult = {3, 7, 9, 1};
 
@@ -33,8 +31,32 @@ class PeakElementTest {
 
     @Test
     void peakElementAlgorithmEmpty() {
-//    Test Data: {} → {}
+
         int[] array = {};
+        int[] expectedResult = {};
+
+        PeakElement pe = new PeakElement();
+        int[] actualResult = pe.peakElementAlgorithm(array);
+
+        Assertions.assertArrayEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    void peakElementAlgorithmSame() {
+
+        int[] array = {3, 2, 7, 5, 1, 9, 9, 1};
+        int[] expectedResult = {3, 7};
+
+        PeakElement pe = new PeakElement();
+        int[] actualResult = pe.peakElementAlgorithm(array);
+
+        Assertions.assertArrayEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    void peakElementAlgorithmAllSame() {
+
+        int[] array = {3, 3, 3, 3, 3, 3, 3, 3};
         int[] expectedResult = {};
 
         PeakElement pe = new PeakElement();
