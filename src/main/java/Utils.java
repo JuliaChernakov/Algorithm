@@ -275,7 +275,7 @@ public class Utils {
     /** сортирует элементы массива в порядке возрастания */
 
     public static int[] sortArrayMinMax(int[] array) {
-        if (array.length == 0) {
+        if (array.length < 2) {
             return array;
         }
 
@@ -289,6 +289,7 @@ public class Utils {
                 for (int j = r; j < array.length; j++) {
                     result[j] = min;
                 }
+
                 return result;
             }
 
@@ -300,7 +301,7 @@ public class Utils {
                 }
             }
         }
+
         return result;
     }
-
 }

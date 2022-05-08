@@ -2,8 +2,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class SortArrayTest {
 
     @Order(1)
@@ -42,6 +40,19 @@ class SortArrayTest {
 
         Assertions.assertArrayEquals(expectedResult, actualResult);
     }
+
+    @Test
+    public void sortArrayAlgorithmOne() {
+
+        int[] array = {0};
+        int[] expectedResult = {0};
+
+        SortArray sa = new SortArray();
+        int[] actualResult = sa.sortArrayAlgorithm(array);
+
+        Assertions.assertArrayEquals(expectedResult, actualResult);
+    }
+
 
     @Test
     public void sortArrayAlgorithmNull() {
