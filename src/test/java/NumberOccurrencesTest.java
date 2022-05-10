@@ -2,8 +2,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class NumberOccurrencesTest {
 
     @Order(1)
@@ -15,7 +13,7 @@ class NumberOccurrencesTest {
         int[][] expectedResult = {{1, 4}, {2, 4}, {3, 4}, {4, 3}, {5, 4}};
 
         NumberOccurrences no = new NumberOccurrences();
-        int[][] actualResult = no.NumberOccurrencesAlgorithm(array);
+        int[][] actualResult = no.numberOccurrencesAlgorithm(array);
 
         Assertions.assertArrayEquals(expectedResult, actualResult);
     }
@@ -27,7 +25,7 @@ class NumberOccurrencesTest {
         int[][] expectedResult = {{1, 4}, {2, 4}, {3, 4}, {5, 4}};
 
         NumberOccurrences no = new NumberOccurrences();
-        int[][] actualResult = no.NumberOccurrencesAlgorithm(array);
+        int[][] actualResult = no.numberOccurrencesAlgorithm(array);
 
         Assertions.assertArrayEquals(expectedResult, actualResult);
     }
@@ -39,7 +37,7 @@ class NumberOccurrencesTest {
         int[][] expectedResult = {};
 
         NumberOccurrences no = new NumberOccurrences();
-        int[][] actualResult = no.NumberOccurrencesAlgorithm(array);
+        int[][] actualResult = no.numberOccurrencesAlgorithm(array);
 
         Assertions.assertArrayEquals(expectedResult, actualResult);
     }

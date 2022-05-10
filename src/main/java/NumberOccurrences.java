@@ -11,7 +11,7 @@ public class NumberOccurrences {
         return 0;
     }
 
-    public int[][] NumberOccurrencesAlgorithm(int[] array) {
+    public int[][] numberOccurrencesAlgorithm(int[] array) {
         if (array.length == 0) {
             return new int[][]{};
         }
