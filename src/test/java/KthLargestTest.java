@@ -2,8 +2,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class KthLargestTest {
 
     @Order(1)
@@ -16,7 +14,7 @@ class KthLargestTest {
         int expectedResult = 9;
 
         KthLargest kl = new KthLargest();
-        int actualResult = kl.KthLargestAlgorithm(array, k);
+        int actualResult = kl.kthLargestAlgorithm(array, k);
 
         Assertions.assertEquals(expectedResult, actualResult);
     }
@@ -29,7 +27,7 @@ class KthLargestTest {
         int expectedResult = -2147483648;
 
         KthLargest kl = new KthLargest();
-        int actualResult = kl.KthLargestAlgorithm(array, k);
+        int actualResult = kl.kthLargestAlgorithm(array, k);
 
         Assertions.assertEquals(expectedResult, actualResult);
     }
@@ -42,10 +40,8 @@ class KthLargestTest {
         int expectedResult = -2147483648;
 
         KthLargest kl = new KthLargest();
-        int actualResult = kl.KthLargestAlgorithm(array, k);
+        int actualResult = kl.kthLargestAlgorithm(array, k);
 
         Assertions.assertEquals(expectedResult, actualResult);
     }
-
-
 }
