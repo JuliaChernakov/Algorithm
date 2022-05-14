@@ -11,50 +11,39 @@ class StringToNumbersTest {
     @Test
     @Order(1)
     public void stringToNumbersHappyPath() {
-        String string = "1, 2, 3, 4, 5";
-        int[] expectedResult = {1, 2, 3, 4, 5};
 
-        StringToNumbers sn = new StringToNumbers();
-        int[] actualResult = sn.stringToNumbersAlgorithm(string);
+        String string = "орпа одйа86152346]1234лрпср лучрлч3у8638-03]-3к8-/3";
+        String expectedResult = "8615234612343863803383";
 
-        Assertions.assertArrayEquals(expectedResult, actualResult);
+        StringToNumbers sa = new StringToNumbers();
+        String actualResult = sa.stringToNumbersAlgorithm(string);
+
+        Assertions.assertEquals(expectedResult, actualResult);
     }
 
     @Test
+    @Order(1)
+    public void stringToNumbersNoNumbers() {
+
+        String string = "орпа одйалрпср лучрлч _)*&)(*&T &^$%";
+        String expectedResult = "";
+
+        StringToNumbers sa = new StringToNumbers();
+        String actualResult = sa.stringToNumbersAlgorithm(string);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    @Order(1)
     public void stringToNumbersEmpty() {
+
         String string = "";
-        int[] expectedResult = {};
+        String expectedResult = "";
 
-        StringToNumbers sn = new StringToNumbers();
-        int[] actualResult = sn.stringToNumbersAlgorithm(string);
+        StringToNumbers sa = new StringToNumbers();
+        String actualResult = sa.stringToNumbersAlgorithm(string);
 
-        Assertions.assertArrayEquals(expectedResult, actualResult);
+        Assertions.assertEquals(expectedResult, actualResult);
     }
-
-    @Test
-    public void stringToNumbersNoLetters() {
-        String string = "All you need is love";
-        int[] expectedResult = {};
-
-        StringToNumbers sn = new StringToNumbers();
-        int[] actualResult = sn.stringToNumbersAlgorithm(string);
-
-        Assertions.assertArrayEquals(expectedResult, actualResult);
-    }
-
-    @Test
-    public void stringToNumbersBigNumbers() {
-        String string = "254, 75";
-        int[] expectedResult = {2, 5, 4, 7, 5};
-
-        StringToNumbers sn = new StringToNumbers();
-        int[] actualResult = sn.stringToNumbersAlgorithm(string);
-
-        Assertions.assertArrayEquals(expectedResult, actualResult);
-    }
-
-
-
-
-
 }
