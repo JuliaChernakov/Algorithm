@@ -1,6 +1,8 @@
 package HW10;
 
 public class StartsWithLetter {
+//    Написать алгоритм StartsWithLetter, который принимает на вход текст,
+//    и возвращает в виде строки все слова, которые начинаются с буквы l.
 
     public String StartsWithLetter (String string) {
         String result = "";

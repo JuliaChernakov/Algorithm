@@ -1,6 +1,7 @@
 package HW10;
 
 public class StringToNumbers {
+//    Написать алгоритм StringToNumbers. Алгоритм принимает строку и удаляет ненужные символы
 
     public String stringToNumbersAlgorithm(String string) {
         String result = "";

@@ -1,7 +1,6 @@
 package HW10;
 
 public class StringToNumbersArray {
-
 //    Написать алгоритм StringToNumbers, который принимает строку, и возвращает массив чисел
 
     public int[] stringToNumbersAlgorithm (String string) {

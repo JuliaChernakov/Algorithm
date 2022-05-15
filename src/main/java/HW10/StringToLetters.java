@@ -1,6 +1,7 @@
 package HW10;
 
 public class StringToLetters {
+//    Написать алгоритм StringToLetters. Алгоритм принимает строку и удаляет ненужные символы
 
     public String stringToLettersAlgorithm(String string) {
         String result = "";

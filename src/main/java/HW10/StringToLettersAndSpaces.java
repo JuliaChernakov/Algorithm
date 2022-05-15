@@ -1,6 +1,7 @@
 package HW10;
 
 public class StringToLettersAndSpaces {
+//    Написать алгоритм StringToLettersAndSpaces. Алгоритм принимает строку и удаляет ненужные символы
 
     public String stringToLettersAndSpacesAlgorithm(String string) {
         String result = "";
