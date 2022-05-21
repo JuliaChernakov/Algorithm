@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class RemoveDuplicatesTest {
 
     @Test
@@ -53,4 +51,16 @@ class RemoveDuplicatesTest {
 
         Assertions.assertEquals(expectedResult, actualResult);
     }
+
+    @Test
+    void removeDuplicatesAlgorithmNull() {
+        String string = null;
+        String expectedResult = "";
+
+        RemoveDuplicates rd = new RemoveDuplicates();
+        String actualResult = rd.RemoveDuplicatesAlgorithm(string);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
 }
