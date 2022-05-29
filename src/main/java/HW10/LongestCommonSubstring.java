@@ -23,7 +23,8 @@ public class LongestCommonSubstring {
                 str3 = str1;
             }
 
-            for (int i = 0; i < smallest.length() - 1; i++) {
+            /** Option 1 */
+            for (int i = 0; i < smallest.length(); i++) {
                 for (int j = i + 1; j <= smallest.length(); j++) {
                     subString = smallest.substring(i, j);
                     if ((str2.contains(subString)) && (str3.contains(subString))) {
@@ -35,9 +36,23 @@ public class LongestCommonSubstring {
                 }
             }
 
+            /** Option 2 */
+//            int j = 0;
+//            for (int i = 0; i < smallest.length(); i++) {
+//                subString = smallest.substring(j, i + 1);
+//                if ((str2.contains(subString)) && (str3.contains(subString))) {
+//                    result = subString;
+//                } else {
+//                    j++;
+//                }
+//            }
+
             return result;
         }
 
         return "";
     }
 }
+
+
+

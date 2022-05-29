@@ -22,8 +22,22 @@ class LongestCommonSubstringTest {
 
     @Test
     @Order(2)
+    void longestCommonSubstringAlgorithmLastLetter() {
+        String str1 = "klsjfn";
+        String str2 = "amazing";
+        String str3 = "amazon";
+        String expectedResult = "n";
+
+        LongestCommonSubstring cs = new LongestCommonSubstring();
+        String actualResult = cs.LongestCommonSubstringAlgorithm(str1, str2, str3);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    @Order(3)
     void longestCommonSubstringAlgorithmNo() {
-        String str1 = "klsjfn”";
+        String str1 = "klsjf";
         String str2 = "amazing";
         String str3 = "amazon";
         String expectedResult = "";
@@ -76,6 +90,19 @@ class LongestCommonSubstringTest {
     @Test
     void longestCommonSubstringAlgorithmEndBigThird() {
         String str1 = "mazal";
+        String str2 = "amazing";
+        String str3 = "superkamaz";
+        String expectedResult = "maz";
+
+        LongestCommonSubstring cs = new LongestCommonSubstring();
+        String actualResult = cs.LongestCommonSubstringAlgorithm(str1, str2, str3);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    void longestCommonSubstringAlgorithmTwo() {
+        String str1 = "amldkjfmaz";
         String str2 = "amazing";
         String str3 = "superkamaz";
         String expectedResult = "maz";
